@@ -1,27 +1,60 @@
-*****************Calculadora******************
+from pandas.core.indexers.objects import VariableOffsetWindowIndexer
+def menu():
+  print('*****************Calculadora******************')
+  print()
+  print('Selecione a opção desejada:')
+  print()
+  print('1 - Soma')
+  print('2 - Subtração')
+  print('3 - Multiplicação')
+  print('4 - Divisão')
+  print('0 - Para sair')
+  print()
+  #operacao = (int(input('Digite a operação: ')))
 
-Selecione a opção desejada:
 
-1 - Soma
-2 - Subtração
-3 - Multiplicação
-4 - Divisão
-0 - Para sair
+def operacao(x):
+  
+  if x == 1:
+    a = int(input('Digite o primeiro número: '))
+    b = int(input('Digite o segundo número: '))
+    print (a ,'+', b, '=', a+b)
+    print()
 
-Digite a operação: 1
+  elif x == 2:
+    a = int(input('Digite o primeiro número: '))
+    b = int(input('Digite o segundo número: '))
+    print (a ,'-', b, '=', a-b)
+    print()
 
-Digite o primeiro número: 5
-Digite o segundo número: 10
-5 + 10 = 15
+  elif x == 3:
+    a = int(input('Digite o primeiro número: '))
+    b = int(input('Digite o segundo número: '))
+    print (a ,'*', b, '=', a*b)
+    print()
 
-*****************Calculadora******************
+  elif x == 4:
+    a = int(input('Digite o primeiro número: '))
+    b = int(input('Digite o segundo número: '))
+    print (a ,'/', b, '=', a/b)
+    print()
 
-Selecione a opção desejada:
+  elif x == 0:
+    encerrar()
 
-1 - Soma
-2 - Subtração
-3 - Multiplicação
-4 - Divisão
-0 - Para sair
+  else:
+    print('valor invalido')
+    print()
 
-Digite a operação: 0
+def encerrar():
+  zero = 0
+
+
+while True:
+  menu()
+  valor = (int(input('Digite a operação: ')))
+  print()
+  if valor == 0:
+    break
+  else:
+    operacao(valor)
